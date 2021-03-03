@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">本地音乐播放器</string>
+    <string name="button_string">一个按钮</string>
+    <string name="albumthumb">AlbumThumb</string>
+    <string name="played_time">00:00</string>
+    <string name="duration_time">--:--</string>
+    <string name="delete">delete</string>
+    <string name="playlist">播放列表</string>
+    <string name="all_music">全部音乐</string>
+    <string name="album">专辑</string>
+    <string name="settings">设置</string>
+    <string name="now_playing">正在播放</string>
+    <string name="title_activity_settings">设置</string>
+
+    <!-- Preference Titles -->
+    <string name="basic_settings">基本设置</string>
+    <string name="about">关于</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+</resources>

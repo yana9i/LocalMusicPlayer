@@ -1,0 +1,27 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        app:title="@string/basic_settings">
+
+        <SwitchPreference
+            app:key="auto_play_next"
+            app:title="自动播放下一首" />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/about">
+
+
+        <Preference
+            app:title="@string/about"
+            app:summary="本应用由 Raspberry Yanagi 编写"/>
+
+        <Preference app:title="当前音量"
+            app:key="setting_vol"/>
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

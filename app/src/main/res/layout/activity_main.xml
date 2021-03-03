@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/now_playing_album"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:src="@drawable/ic_baseline_music_note_24"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+            <TextView
+                android:id="@+id/now_playing_music_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@android:color/black"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/relativeLayout">
+
+                <TextView
+                    android:id="@+id/current_position"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/played_time"
+                    android:textColor="@android:color/background_dark" />
+
+                <SeekBar
+                    android:id="@+id/seek_music"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5" />
+
+                <TextView
+                    android:id="@+id/duration_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/duration_time"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <Button
+                    android:id="@+id/play_btn"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_baseline_play_arrow_24"
+                    android:text="" />
+
+                <Button
+                    android:id="@+id/pre_btn"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="50dp"
+                    android:layout_toStartOf="@id/play_btn"
+                    android:background="@drawable/ic_baseline_skip_previous_24"
+                    android:text="" />
+
+                <Button
+                    android:id="@+id/next_btn"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_toEndOf="@id/play_btn"
+                    android:background="@drawable/ic_baseline_skip_next_24"
+                    android:text="" />
+
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:menu="@menu/nav_menu"
+        app:headerLayout="@layout/nav_header"
+        android:layout_gravity="start"
+        />
+
+</androidx.drawerlayout.widget.DrawerLayout>

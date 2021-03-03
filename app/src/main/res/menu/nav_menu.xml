@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_to_nowPlaying"
+            android:icon="@drawable/ic_baseline_play_circle_filled_24"
+            android:title="@string/now_playing" />
+        <item
+            android:id="@+id/nav_to_playlist"
+            android:icon="@drawable/ic_baseline_playlist_play_24"
+            android:title="@string/playlist" />
+        <item
+            android:id="@+id/nav_to_allMusic"
+            android:icon="@drawable/ic_baseline_queue_music_24"
+            android:title="@string/all_music" />
+        <item
+            android:id="@+id/nav_to_albumList"
+            android:icon="@drawable/ic_baseline_library_music_24"
+            android:title="@string/album" />
+        <item
+            android:id="@+id/nav_to_settings"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="@string/settings" />
+    </group>
+</menu>
